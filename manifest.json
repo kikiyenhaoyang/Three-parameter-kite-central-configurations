@@ -1,0 +1,73 @@
+{
+  "format": "kite-matlab-symbolic-certificates-v2",
+  "version": "2.3.0",
+  "checks": [
+    {
+      "id": "K0",
+      "title": "Exact local positive-mass witness and mass Jacobian",
+      "script": "verify_kite_quick_results.m",
+      "entrypoint": "verify_kite_quick_results",
+      "data": []
+    },
+    {
+      "id": "N1",
+      "title": "Two inequivalent nonsingular kites with identical positive masses",
+      "script": "verify_kite_noninjectivity.m",
+      "entrypoint": "verify_kite_noninjectivity",
+      "data": []
+    },
+    {
+      "id": "K1",
+      "title": "Six strict axial mass orders",
+      "script": "verify_kite_mass_orders.m",
+      "entrypoint": "verify_kite_mass_orders",
+      "data": []
+    },
+    {
+      "id": "K2",
+      "title": "Local kite regularity and triple-equality arc",
+      "script": "verify_kite_regularity.m",
+      "entrypoint": "verify_kite_regularity",
+      "data": []
+    },
+    {
+      "id": "S1",
+      "title": "Singular kite IVT and local positive-mass surface",
+      "script": "certify_singular_kite_ivt.m",
+      "entrypoint": "certify_singular_kite_ivt",
+      "data": []
+    },
+    {
+      "id": "B1",
+      "title": "Exact regular mass-zero boundary and positive side",
+      "script": "certify_regular_mass_zero_boundary.m",
+      "entrypoint": "certify_regular_mass_zero_boundary",
+      "data": []
+    },
+    {
+      "id": "R1",
+      "title": "Rhomboidal equal-mass locus regularity",
+      "script": "verify_nondegeneracy.m",
+      "entrypoint": "verify_nondegeneracy",
+      "data": [
+        "nondegeneracy_certificate.json"
+      ]
+    },
+    {
+      "id": "R2",
+      "title": "Positive-mass intersections in regions A, B, F and G",
+      "script": "verify_region_intersections.m",
+      "entrypoint": "verify_region_intersections",
+      "data": []
+    },
+    {
+      "id": "R3",
+      "title": "Exclusion of relative closures C, D, E, H and I",
+      "script": "verify_exclusion.m",
+      "entrypoint": "verify_exclusion",
+      "data": [
+        "exclusion_certificate.json"
+      ]
+    }
+  ]
+}
