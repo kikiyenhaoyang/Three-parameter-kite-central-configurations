@@ -1,0 +1,259 @@
+{
+  "scope": "Attachment packaging only; MATLAB and mathematical checks not executed.",
+  "original_checksum_entries": 32,
+  "summary_after_filename_normalization": {
+    "matches": 11,
+    "checksum_mismatch": 5,
+    "missing_from_attachments": 16
+  },
+  "renamed_files": {
+    "README(3).md": "README.md",
+    "certify_singular_kite_ivt(4).m": "certify_singular_kite_ivt.m",
+    "exclusion_certificate(2).json": "exclusion_certificate.json",
+    "nondegeneracy_certificate(1).json": "nondegeneracy_certificate.json",
+    "verify_kite_quick_results(1).m": "verify_kite_quick_results.m"
+  },
+  "original_manifest_ids": [
+    "K0",
+    "N1",
+    "K1",
+    "K2",
+    "S1",
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "reference_summary_ids": [
+    "K1",
+    "K2",
+    "R1",
+    "R3",
+    "R2"
+  ],
+  "original_inventory": [
+    {
+      "inventory_path": "README.md",
+      "uploaded_name": "README(3).md",
+      "expected_sha256": "4115fe694bad9375fa7874e67b4cdbfa7eb663854d9b2373a90eeae3dae1d221",
+      "uploaded_sha256": "0a898d15617447897e724aff258c8555d1c7d1a1f0565f2d6bc96a0762701104",
+      "status": "checksum_mismatch"
+    },
+    {
+      "inventory_path": "arithmetic_reference.json",
+      "uploaded_name": "arithmetic_reference.json",
+      "expected_sha256": "0dd215f6622e2fbc77e2ebab0b244b441db95109486a952ea873ae82555c270b",
+      "uploaded_sha256": "0dd215f6622e2fbc77e2ebab0b244b441db95109486a952ea873ae82555c270b",
+      "status": "matches"
+    },
+    {
+      "inventory_path": "certify_regular_mass_zero_boundary.m",
+      "uploaded_name": null,
+      "expected_sha256": "475cc9aef9a16b62eaf09c453db902b11a669ad08ff1b8919145d895794c95a7",
+      "uploaded_sha256": null,
+      "status": "missing_from_attachments"
+    },
+    {
+      "inventory_path": "certify_singular_kite_ivt.m",
+      "uploaded_name": "certify_singular_kite_ivt(4).m",
+      "expected_sha256": "5f5ac8d88997518ff4c748ebf7233a7b1d4268a9d7c4811bc37affe70172379d",
+      "uploaded_sha256": "5f5ac8d88997518ff4c748ebf7233a7b1d4268a9d7c4811bc37affe70172379d",
+      "status": "matches"
+    },
+    {
+      "inventory_path": "exclusion_certificate.json",
+      "uploaded_name": "exclusion_certificate(2).json",
+      "expected_sha256": "5c960d142734f2bde01e8ede31267e80e70b27bf69b8bdacfe830808a7861bac",
+      "uploaded_sha256": "5c960d142734f2bde01e8ede31267e80e70b27bf69b8bdacfe830808a7861bac",
+      "status": "matches"
+    },
+    {
+      "inventory_path": "manifest.json",
+      "uploaded_name": "manifest.json",
+      "expected_sha256": "e84679145978ccf4a9c32867d231ef5bb356b251b6e8726aa02c4499a6617f6e",
+      "uploaded_sha256": "1e9871e008cc2f0f103c6019ef52b0d913c9b67d17f956e9caa9bfba2e57d8c6",
+      "status": "checksum_mismatch"
+    },
+    {
+      "inventory_path": "nondegeneracy_certificate.json",
+      "uploaded_name": "nondegeneracy_certificate(1).json",
+      "expected_sha256": "256293c840fa7f9717ba7bcfac129db9e9a83be85bf40f908ee821f7e70f35b8",
+      "uploaded_sha256": "256293c840fa7f9717ba7bcfac129db9e9a83be85bf40f908ee821f7e70f35b8",
+      "status": "matches"
+    },
+    {
+      "inventory_path": "noninjectivity_proof.tex",
+      "uploaded_name": null,
+      "expected_sha256": "529931098e8032aeae73567f1d5fe82807a565e40419878829ab03088cc96a0b",
+      "uploaded_sha256": null,
+      "status": "missing_from_attachments"
+    },
+    {
+      "inventory_path": "reference_expected.json",
+      "uploaded_name": "reference_expected.json",
+      "expected_sha256": "e9e1bf2a4ee73f9f8496e0c72b6491a5b24ee0512addd85cd4a5283a57069ed1",
+      "uploaded_sha256": "59b4fbbe393102ff2323eac3827381b71fe0e8016873fac644bc170cf12541c6",
+      "status": "checksum_mismatch"
+    },
+    {
+      "inventory_path": "reference_logs/formula_audit.json",
+      "uploaded_name": null,
+      "expected_sha256": "f43b4a23b43b042e5b6eeb2bce40c696175ffdbd1af50fbf85ba6c5190f8e4fe",
+      "uploaded_sha256": null,
+      "status": "missing_from_attachments"
+    },
+    {
+      "inventory_path": "reference_logs/noninjectivity_certificate.json",
+      "uploaded_name": null,
+      "expected_sha256": "1033b1445e5e22ee8cc3e14e8ba101835568a0121112c3827a6db02a0fb3d96c",
+      "uploaded_sha256": null,
+      "status": "missing_from_attachments"
+    },
+    {
+      "inventory_path": "reference_logs/noninjectivity_formula_audit.json",
+      "uploaded_name": null,
+      "expected_sha256": "c1f3b90fc72179ef392c390536cca7e19b1e691270c7a953eba0fc5c9875ff1b",
+      "uploaded_sha256": null,
+      "status": "missing_from_attachments"
+    },
+    {
+      "inventory_path": "reference_logs/python_baseline_summary.json",
+      "uploaded_name": null,
+      "expected_sha256": "c967516ea7e765bc6c222053cbcb89c4655777c430404eddd1a1c4fe3a94b82f",
+      "uploaded_sha256": null,
+      "status": "missing_from_attachments"
+    },
+    {
+      "inventory_path": "reference_logs/quick_results_audit.json",
+      "uploaded_name": null,
+      "expected_sha256": "25aa00e8a4256115c7b58388bb3faff673100c4b8986c082d94dde8eb83c6658",
+      "uploaded_sha256": null,
+      "status": "missing_from_attachments"
+    },
+    {
+      "inventory_path": "reference_logs/regular_mass_zero_boundary_audit.json",
+      "uploaded_name": null,
+      "expected_sha256": "20a23598075bf9a9376a74df05b8392a3f6d20ae046043f39a05b6dc1e4eb061",
+      "uploaded_sha256": null,
+      "status": "missing_from_attachments"
+    },
+    {
+      "inventory_path": "reference_logs/singular_ivt_audit.json",
+      "uploaded_name": null,
+      "expected_sha256": "21fd5fdc31f473228db7610e7ff033f0640c8fd0cd756bf666a20ed1e904b6b7",
+      "uploaded_sha256": null,
+      "status": "missing_from_attachments"
+    },
+    {
+      "inventory_path": "reference_logs/source_sha256.json",
+      "uploaded_name": null,
+      "expected_sha256": "9ad067bbff93a4480b9ba239b8c7d07dcb252c49b0ac902c888568cb335fc409",
+      "uploaded_sha256": null,
+      "status": "missing_from_attachments"
+    },
+    {
+      "inventory_path": "reference_logs/verify_exclusion.py.log",
+      "uploaded_name": null,
+      "expected_sha256": "0fa32bf3b5475911e2839931eaa89d3daf475e5b14be61b1f71b65f47ccee556",
+      "uploaded_sha256": null,
+      "status": "missing_from_attachments"
+    },
+    {
+      "inventory_path": "reference_logs/verify_kite_mass_orders.py.log",
+      "uploaded_name": null,
+      "expected_sha256": "0ae5daa5786fff397b8a6aba3b15af9f80336c5dff45c9c939c93601213ee91d",
+      "uploaded_sha256": null,
+      "status": "missing_from_attachments"
+    },
+    {
+      "inventory_path": "reference_logs/verify_kite_regularity.py.log",
+      "uploaded_name": null,
+      "expected_sha256": "1ad7bec66984aeba0893b75ed61d5a84f69a3d9ad93366e6fa737bcedc221120",
+      "uploaded_sha256": null,
+      "status": "missing_from_attachments"
+    },
+    {
+      "inventory_path": "reference_logs/verify_nondegeneracy.py.log",
+      "uploaded_name": null,
+      "expected_sha256": "6fa9c10909e2da532fa1349080dd7b2d9bc2bfe311e59df6d1e91d9f2bc5d000",
+      "uploaded_sha256": null,
+      "status": "missing_from_attachments"
+    },
+    {
+      "inventory_path": "reference_logs/verify_region_intersections.py.log",
+      "uploaded_name": null,
+      "expected_sha256": "ff295f8c2f8230dcae3949bfa63c164e3bd0f637b639c21483422367f1c1c85c",
+      "uploaded_sha256": null,
+      "status": "missing_from_attachments"
+    },
+    {
+      "inventory_path": "reference_python/verify_kite_noninjectivity.py",
+      "uploaded_name": null,
+      "expected_sha256": "e0c6ad278ff0700bc990d54c6b8ff4da9dbad83386f054b56df435a27822f252",
+      "uploaded_sha256": null,
+      "status": "missing_from_attachments"
+    },
+    {
+      "inventory_path": "run_all.m",
+      "uploaded_name": "run_all.m",
+      "expected_sha256": "9861ec7e8fa49fb7702f41713d8dd901c1b4b5d8f32d6836007783c63e68a702",
+      "uploaded_sha256": "98cbc895368fd534a44fcb5159f8516010deed8ce9fc7b3aadb9fe5174079666",
+      "status": "checksum_mismatch"
+    },
+    {
+      "inventory_path": "selftest.m",
+      "uploaded_name": "selftest.m",
+      "expected_sha256": "0c583c329cd832cf093340ac15cd0af3daea9e70a171049fc4779aa7053bf8be",
+      "uploaded_sha256": "bd1845ba5085f20c01c50e07c01e8d4ee40582431c7e808ca563bde328c96b99",
+      "status": "checksum_mismatch"
+    },
+    {
+      "inventory_path": "verify_exclusion.m",
+      "uploaded_name": "verify_exclusion.m",
+      "expected_sha256": "da1fef5b4f75d22424a2bb13167a114adba349e3b81ea452e3714e6415415677",
+      "uploaded_sha256": "da1fef5b4f75d22424a2bb13167a114adba349e3b81ea452e3714e6415415677",
+      "status": "matches"
+    },
+    {
+      "inventory_path": "verify_kite_mass_orders.m",
+      "uploaded_name": "verify_kite_mass_orders.m",
+      "expected_sha256": "3fc0fad64da804d1e4e725b50e7990824ac21f174a255918803079311bc868cf",
+      "uploaded_sha256": "3fc0fad64da804d1e4e725b50e7990824ac21f174a255918803079311bc868cf",
+      "status": "matches"
+    },
+    {
+      "inventory_path": "verify_kite_noninjectivity.m",
+      "uploaded_name": "verify_kite_noninjectivity.m",
+      "expected_sha256": "128645bae94a81c39cbb672fea696143740ff2849e722d4100f66fc2055a3b82",
+      "uploaded_sha256": "128645bae94a81c39cbb672fea696143740ff2849e722d4100f66fc2055a3b82",
+      "status": "matches"
+    },
+    {
+      "inventory_path": "verify_kite_quick_results.m",
+      "uploaded_name": "verify_kite_quick_results(1).m",
+      "expected_sha256": "6eac1cf4198a7f1a60edbb71437731617c610db1e884c7a974e90ded98fd46eb",
+      "uploaded_sha256": "6eac1cf4198a7f1a60edbb71437731617c610db1e884c7a974e90ded98fd46eb",
+      "status": "matches"
+    },
+    {
+      "inventory_path": "verify_kite_regularity.m",
+      "uploaded_name": "verify_kite_regularity.m",
+      "expected_sha256": "ab9a3ed48be83cf5b59d344821d79a7397b86c26d2f27857349ec07a4fca3996",
+      "uploaded_sha256": "ab9a3ed48be83cf5b59d344821d79a7397b86c26d2f27857349ec07a4fca3996",
+      "status": "matches"
+    },
+    {
+      "inventory_path": "verify_nondegeneracy.m",
+      "uploaded_name": "verify_nondegeneracy.m",
+      "expected_sha256": "27b6f5136e95fc6e64659637b0b6d7be1b4020300cbe43acda2a40ad6bca5d65",
+      "uploaded_sha256": "27b6f5136e95fc6e64659637b0b6d7be1b4020300cbe43acda2a40ad6bca5d65",
+      "status": "matches"
+    },
+    {
+      "inventory_path": "verify_region_intersections.m",
+      "uploaded_name": "verify_region_intersections.m",
+      "expected_sha256": "2cab43493a1d697e1c637f45b62b5946b14135d9e1b1cf345c87a34140ee08bb",
+      "uploaded_sha256": "2cab43493a1d697e1c637f45b62b5946b14135d9e1b1cf345c87a34140ee08bb",
+      "status": "matches"
+    }
+  ]
+}

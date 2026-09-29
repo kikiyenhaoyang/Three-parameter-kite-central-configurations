@@ -2,7 +2,7 @@ function report = run_all(varargin)
 %RUN_ALL Verify all bundled exact certificates and save logs plus summary.json.
 %   run_all
 %   run_all('Only',{'K0'})
-%   run_all('Only',{'S1','B1'})
+%   run_all('Only',{'K0','S1'})
 %   run_all('Only',{'K2','R3'})
 %   run_all('List',true)
 %   run_all('CheckOnly',true)

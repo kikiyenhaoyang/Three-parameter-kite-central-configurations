@@ -26,16 +26,15 @@ The package contains ten `.m` files, including eight verifiers, `run_all.m`, and
 
 K2, R1, R2, and R3 retain proofs covering entire intervals or regions. In particular, K2 includes interval bounds on partial derivatives and a uniform contraction argument, rather than relying solely on a Jacobian evaluation at one point. The original local and global scope remains unchanged: the package makes no additional claims about dynamical nondegeneracy, global connectedness, or the total number of global branches.
 
-## **Running Verifications**
+MATLAB with Symbolic Math Toolbox is required. After downloading the project, extract the archive into a new folder and set MATLAB’s **Current Folder** to that folder (the folder containing `run_all.m`). To run all bundled verifiers, execute:
 
-MATLAB with Symbolic Math Toolbox is required. After downloading the project, set MATLAB’s **Current Folder** to the same file. To run all bundled verifiers, execute:
+## **Running Verifications**
 
 ```matlab
 % Run selected verifications
 run_all('Only', {'K0'});
 run_all('Only', {'N1'});
 run_all('Only', {'K0','S1'});
-run_all('Only', {'S1'});
 report = run_all('Only', {'K2','R3'});
 
 % List available items, check package files, or select an output directory
@@ -51,8 +50,8 @@ verify_exclusion('path/to/exclusion_certificate.json')
 % interval arithmetic, and invalid-input handling
 selftest
 
-% Recompute all nine certificates and compare the exact reference
-% summaries for the original five certificates, B1, and N1
+% Recompute all eight certificates and compare the five available
+% exact reference summaries: K1, K2, R1, R2, and R3
 selftest('Full', true)
 ```
 
@@ -118,3 +117,34 @@ The original attachments did not include the original manifest, `SHA256SUMS`, or
 If you modify any source file, its original checksum will no longer match. This is expected for a modified working copy. To test modified code, run the corresponding verifier directly.
 
 The checksum mechanism is intended only to detect changes in file contents. It is **not** a digital-signature or authenticity mechanism.
+
+## Attachment packaging repair
+
+This copy was reconstructed from the 17 supplied attachments. See
+`REPAIR_NOTES.txt` and `repair_audit.json` for the exact packaging findings.
+All eight verifier files and both JSON certificates retain their uploaded
+byte contents. Only comments were corrected in `run_all.m` and `selftest.m`;
+their executable code is unchanged. The manifest version identifies this
+repackaged copy, and the supplied checksum inventory is preserved as
+`ORIGINAL_SHA256SUMS.txt`.
+
+The active `SHA256SUMS` covers this copy. It was regenerated from these
+attachments; it does not establish that the attachments match a complete
+original archive. The original inventory has 16 entries with no supplied
+file, including the B1 verifier. B1 is not included in this copy.
+
+Start with:
+
+```matlab
+run_all('CheckOnly', true)
+run_all('Only', {'K0'})
+```
+
+Then use `run_all` for all eight bundled checks, or `selftest('Full', true)`
+for the arithmetic self-tests, all eight checks, and the five available
+reference comparisons. `run_all` captures each verifier's output and writes
+its log after that verifier returns, so a long `RUN ...` interval alone does
+not establish that MATLAB has hung.
+
+Packaging checks were performed without MATLAB. No MATLAB execution or
+mathematical verification pass is claimed for this repair.

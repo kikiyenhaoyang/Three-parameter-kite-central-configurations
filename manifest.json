@@ -1,6 +1,6 @@
 {
   "format": "kite-matlab-symbolic-certificates-v2",
-  "version": "2.3.0",
+  "version": "2.3.0+attachment-repair.1",
   "checks": [
     {
       "id": "K0",

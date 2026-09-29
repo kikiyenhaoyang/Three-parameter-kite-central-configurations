@@ -1,7 +1,7 @@
 function selftest(varargin)
 %SELFTEST Test symbolic rationals, interval bounds and certificate rejection.
 %   selftest                 % fast tests
-%   selftest('Full',true)     % all certificates + six reference comparisons
+%   selftest('Full',true)     % all eight certificates + five reference comparisons
 if isempty(ver('symbolic'))
     error('selftest:MissingSymbolicToolbox', ...
         'This verification script requires Symbolic Math Toolbox.');
