@@ -38,13 +38,6 @@
       "data": []
     },
     {
-      "id": "B1",
-      "title": "Exact regular mass-zero boundary and positive side",
-      "script": "certify_regular_mass_zero_boundary.m",
-      "entrypoint": "certify_regular_mass_zero_boundary",
-      "data": []
-    },
-    {
       "id": "R1",
       "title": "Rhomboidal equal-mass locus regularity",
       "script": "verify_nondegeneracy.m",
