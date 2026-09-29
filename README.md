@@ -26,16 +26,16 @@ The package contains ten `.m` files, including eight verifiers, `run_all.m`, and
 
 K2, R1, R2, and R3 retain proofs covering entire intervals or regions. In particular, K2 includes interval bounds on partial derivatives and a uniform contraction argument, rather than relying solely on a Jacobian evaluation at one point. The original local and global scope remains unchanged: the package makes no additional claims about dynamical nondegeneracy, global connectedness, or the total number of global branches.
 
-MATLAB with Symbolic Math Toolbox is required. After downloading the project, set MATLAB’s **Current Folder** to the same file. To run all bundled verifiers, execute:
-
 ## **Running Verifications**
+
+MATLAB with Symbolic Math Toolbox is required. After downloading the project, set MATLAB’s **Current Folder** to the same file. To run all bundled verifiers, execute:
 
 ```matlab
 % Run selected verifications
 run_all('Only', {'K0'});
 run_all('Only', {'N1'});
 run_all('Only', {'K0','S1'});
-run_all('Only', {'S1','B1'});
+run_all('Only', {'S1'});
 report = run_all('Only', {'K2','R3'});
 
 % List available items, check package files, or select an output directory
