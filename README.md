@@ -1,17 +1,17 @@
 # Three-parameter-kite-central-configurations
-This is the repository for the MATLAB code used in the computer-assisted proofs in the paper "Three-parameter kite central configurations in the planar five-body problem".
 
+This is the repository for the MATLAB code used in the computer-assisted proofs in the paper *"Three-parameter kite central configurations in the planar five-body problem"*.
 
 | ID | Main function | Verification scope |
 |---|---|---|
-| K0 | `verify_kite_quick_results` | Admissibility, positive masses, and the exact linear system at $(\frac12,\frac12,\frac15)$. |
-| N1 | `verify_kite_noninjectivity` | Two inequivalent nonsingular configurations with the same positive masses $(\frac{1}{50},1,\frac{1}{100},1,\frac{3}{10})$, exact contraction certificates, and two local inverse branches. |
+| K0 | `verify_kite_quick_results` | Admissibility, positive masses, and the exact linear system at $`(\frac12,\frac12,\frac15)`$. |
+| N1 | `verify_kite_noninjectivity` | Two inequivalent nonsingular configurations with the same positive masses $`(\frac{1}{50},1,\frac{1}{100},1,\frac{3}{10})`$, exact contraction certificates, and two local inverse branches. |
 | K1 | `verify_kite_mass_orders` | All six strict axial mass orderings; exact linear systems, Cramer’s rule, and 60 Cartesian central-configuration residuals. |
 | K2 | `verify_kite_regularity` | Jacobian bounds and a uniform contraction argument over an entire closed box, establishing a local arc where the three axial masses are equal. |
 | S1 | `certify_singular_kite_ivt` | An intermediate value theorem certificate for singular kites using 324 subboxes, the positive-mass interval, and a local mass surface. |
-| R1 | `verify_nondegeneracy` | A complete partition into 1,869 subboxes and sign conditions on $H,H_u,H_v$, establishing regularity of the equal-mass locus. |
-| R2 | `verify_region_intersections` | A unique intersection with the equal-mass locus along each of four positive-mass line segments in regions $\mathcal{A}$, $\mathcal{B}$, $\mathcal{F}$, and $\mathcal{G}$. |
-| R3 | `verify_exclusion` | A complete partition into 4,021 subboxes and corner comparisons, excluding the relative closures of regions $\mathcal{C}$, $\mathcal{D}$, $\mathcal{E}$, $\mathcal{H}$, and $\mathcal{I}$. |
+| R1 | `verify_nondegeneracy` | A complete partition into 1,869 subboxes and sign conditions on $`H`$, $`H_u`$, and $`H_v`$, establishing regularity of the equal-mass locus. |
+| R2 | `verify_region_intersections` | A unique intersection with the equal-mass locus along each of four positive-mass line segments in regions $`\mathcal{A}`$, $`\mathcal{B}`$, $`\mathcal{F}`$, and $`\mathcal{G}`$. |
+| R3 | `verify_exclusion` | A complete partition into 4,021 subboxes and corner comparisons, excluding the relative closures of regions $`\mathcal{C}`$, $`\mathcal{D}`$, $`\mathcal{E}`$, $`\mathcal{H}`$, and $`\mathcal{I}`$. |
 
 K2, R1, R2, and R3 retain proofs covering entire intervals or regions. In particular, K2 includes interval bounds on partial derivatives and a uniform contraction argument, rather than relying solely on a Jacobian evaluation at one point. The original local and global scope remains unchanged: the package makes no additional claims about dynamical nondegeneracy, global connectedness, or the total number of global branches.
 
