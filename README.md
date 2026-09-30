@@ -145,6 +145,3 @@ for the arithmetic self-tests, all eight checks, and the five available
 reference comparisons. `run_all` captures each verifier's output and writes
 its log after that verifier returns, so a long `RUN ...` interval alone does
 not establish that MATLAB has hung.
-
-Packaging checks were performed without MATLAB. No MATLAB execution or
-mathematical verification pass is claimed for this repair.
