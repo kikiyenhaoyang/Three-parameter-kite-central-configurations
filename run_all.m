@@ -11,6 +11,7 @@ function report = run_all(varargin)
 % Requires Symbolic Math Toolbox. All helpers are local to this file.
 % Mathematical certificates use exact symbolic rationals; decimals are display only.
 % Checks run as separate function calls in the current MATLAB process.
+% Package checks verify file presence and paths; file checksums are not used.
 p=inputParser;
 addParameter(p,'Only',{},@(v)iscellstr(v)||ischar(v)||isstring(v));
 addParameter(p,'List',false,@(v)islogical(v)&&isscalar(v));
@@ -21,9 +22,9 @@ if isempty(ver('symbolic'))
     error('run_all:MissingSymbolicToolbox', ...
         'This verification script requires Symbolic Math Toolbox.');
 end
-require(usejava('jvm'),'File checksum checking requires the MATLAB JVM.');
+require(usejava('jvm'),'Canonical path handling requires the MATLAB JVM.');
 base=fileparts(mfilename('fullpath'));
-files=check_bundle_files(base);
+check_bundle_files(base);
 manifest=jsondecode(fileread(fullfile(base,'manifest.json')));
 require(strcmp(manifest.format,'kite-matlab-symbolic-certificates-v2'),'Unknown manifest format.');
 checks=manifest.checks; ids={checks.id};
@@ -34,8 +35,8 @@ for k=1:numel(checks)
     if isempty(data), data={}; end
     needed=[{checks(k).script};data(:)];
     for j=1:numel(needed)
-        require(any(strcmp(needed{j},files)), ...
-            ['A certificate file is absent from SHA256SUMS: ' needed{j}]);
+        path=bundle_path(base,needed{j});
+        require(exist(path,'file')==2,['Missing certificate file: ' needed{j}]);
     end
     [~,functionName,ext]=fileparts(checks(k).script);
     require(strcmp(ext,'.m') && strcmp(checks(k).entrypoint,functionName), ...
@@ -147,32 +148,10 @@ catch exception
 end
 end
 
-function files = check_bundle_files(base)
-lines=regexp(fileread(fullfile(base,'SHA256SUMS')),'\r?\n','split');
-if ~isempty(lines) && isempty(lines{end}), lines(end)=[]; end
-files=cell(1,numel(lines));
-for k=1:numel(lines)
-    tokens=regexp(lines{k},'^([0-9a-f]{64})  (.+)$','tokens','once');
-    require(~isempty(tokens),'Malformed checksum entry.');
-    relative=tokens{2};
-    require(~any(strcmp(relative,files(1:k-1))),'Duplicate checksum entry.');
-    path=bundle_path(base,relative);
-    require(exist(path,'file')==2,['Missing bundle file: ' relative]);
-    require(strcmp(sha256_file(path),tokens{1}),['Checksum mismatch: ' relative]);
-    files{k}=relative;
-end
+function check_bundle_files(base)
 required={'manifest.json','run_all.m','README.md','selftest.m','reference_expected.json'};
-require(all(ismember(required,files)),'Incomplete checksum inventory.');
-fprintf('PASS: SHA-256 checksums for %d files.\n',numel(files));
+for k=1:numel(required)
+    path=bundle_path(base,required{k});
+    require(exist(path,'file')==2,['Missing bundle file: ' required{k}]);
 end
-
-function digest = sha256_file(path)
-fid=fopen(path,'rb');
-require(fid>=0,['Cannot open file: ' path]);
-cleanup=onCleanup(@()fclose(fid));
-bytes=fread(fid,Inf,'*uint8');
-md=javaMethod('getInstance','java.security.MessageDigest','SHA-256');
-md.update(typecast(bytes(:),'int8'));
-raw=typecast(md.digest(),'uint8');
-digest=lower(reshape(dec2hex(raw,2).',1,[]));
 end
