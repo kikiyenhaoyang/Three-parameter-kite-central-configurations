@@ -145,3 +145,23 @@ for the arithmetic self-tests, all eight checks, and the five available
 reference comparisons. `run_all` captures each verifier's output and writes
 its log after that verifier returns, so a long `RUN ...` interval alone does
 not establish that MATLAB has hung.
+
+The reference time of implementation is as follows:
+```matlab
+RUN K0: Exact local positive-mass witness and mass Jacobian
+PASS K0 (1.547 s)
+RUN N1: Two inequivalent nonsingular kites with identical positive masses
+PASS N1 (27.376 s)
+RUN K1: Six strict axial mass orders
+PASS K1 (3.155 s)
+RUN K2: Local kite regularity and triple-equality arc
+PASS K2 (41.025 s)
+RUN S1: Singular kite IVT and local positive-mass surface
+PASS S1 (3284.966 s)
+RUN R1: Rhomboidal equal-mass locus regularity
+PASS R1 (4767.922 s)
+RUN R2: Positive-mass intersections in regions A, B, F and G
+PASS R2 (27.947 s)
+RUN R3: Exclusion of relative closures C, D, E, H and I
+PASS R3 (3909.443 s)
+```
