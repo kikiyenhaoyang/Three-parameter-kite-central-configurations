@@ -1,0 +1,11 @@
+PASS: physical domain is contained in the rational root rectangle.
+PASS: 1869 leaves form an exact complete rectangular partition.
+PASS: every leaf is outside v>u or excludes zero from H, Hu, or Hv.
+Leaf counts: {"H+": 339, "H-": 522, "Hu+": 177, "Hv-": 813, "outside_v_le_u": 18}
+H+: every selected signed endpoint exceeds 0.000029633298 (downward-rounded lower bound).
+H-: every selected signed endpoint exceeds 0.000795012788 (downward-rounded lower bound).
+Hu+: every selected signed endpoint exceeds 0.035682876126 (downward-rounded lower bound).
+Hv-: every selected signed endpoint exceeds 0.000398162705 (downward-rounded lower bound).
+THEOREM VERIFIED: H=Hu=Hv=0 has no solution in the admissible domain.
+On H=0 in that domain, max(abs(Hu),abs(Hv)) > 3/10000.
+Thus every point of m1=m5 in the positive-mass locus is a regular point.

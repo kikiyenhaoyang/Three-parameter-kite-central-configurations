@@ -1,0 +1,52 @@
+Singular-kite certificates for Theorem 7.2 and the local mass surface
+z_* = 2783/5000
+rectangle x [0.9780199, 0.9780201] (display rounded), y [0.2957641, 0.2957644] (display rounded)
+subdivision = 18 x 18 exact rational boxes
+
+A = [0.90532501870530744, 0.905325278082833728] (display rounded)
+B = [0.650826513170615166, 0.650826868956275966] (display rounded)
+F = [1.159988000624174274, 1.159988555547598163] (display rounded)
+H = [0.007607061777575111, 0.007622678923439644] (display rounded)
+J = [1.82248854161779632, 1.822489016777093668] (display rounded)
+E_x = [-2.454744745786931545, -2.454704573769909402] (display rounded)
+E_y = [-4.858930389814242461, -4.85879307419630589] (display rounded)
+det D_(x,y)(E,K3) = [-0.038236804169530765, -0.038041845762790002] (display rounded)
+E(x_right,y_low) = [0.000000495971014482, 0.000000495971014482] (display rounded)
+E(x_left,y_high) = [-0.000000470742573113, -0.000000470742573113] (display rounded)
+endpoint x = 9780199/10000000, h(x) in [0.2957643031163, 0.2957643031164] (display rounded)
+  E at lower/upper y = [0.000000000000222965, 0.000000000000222965] (display rounded)  [-0.00000000000026292, -0.00000000000026292] (display rounded)
+  K3 enclosure = [0.000000000751474594, 0.000000000753136275] (display rounded)
+endpoint x = 9780201/10000000, h(x) in [0.29576420207515, 0.29576420207525] (display rounded)
+  E at lower/upper y = [0.000000000000237182, 0.000000000000237182] (display rounded)  [-0.000000000000248704, -0.000000000000248704] (display rounded)
+  K3 enclosure = [-0.000000000818400905, -0.000000000816739224] (display rounded)
+coarse positivity bounds: -3<Delta1<0, U<-1/4, W>1/20, 0<T<4
+Delta1 = [-2.829328752101012105, -2.829313112359715858] (display rounded)
+U = [-0.271553961576203835, -0.271551277613870953] (display rounded)
+W = [0.050189081800178626, 0.050191120117371449] (display rounded)
+T = (alpha-1)Delta6 = [3.221306257564810816, 3.22131855005655085] (display rounded)
+m1 at t=1/100 = [0.017229609498591995, 0.017245511042453338] (display rounded)
+m5 at t=1/100 = [0.301884934744474879, 0.301902930762309664] (display rounded)
+
+Full positive-mass interval and its endpoints:
+tau = W/((alpha-1)Delta6) = [0.015578046442105053, 0.015583228676249501] (display rounded)
+rho = U/Delta1 = [0.095975682928080554, 0.095980356085360329] (display rounded)
+at t=0: m3=0, m1 in [0.04811785985186416, 0.04813357248943298] (display rounded), m5 in [0.336997762518928778, 0.337015943141856433] (display rounded)
+at t=tau: m1=0 exactly by definition, m3=tau>0, m5 in [0.282280640051020785, 0.28231672938477751] (display rounded)
+
+Mass-surface derivative certificate at t_*=1/100:
+whole-rectangle det D_(x,y)(E,K3) = [-0.03966941979427603, -0.03660925688450908] (display rounded)
+x'(z) enclosure = [34.117206904423444579, 37.066976989209374883] (display rounded)
+y'(z) enclosure = [-19.531170952574757208, -17.979424818814239441] (display rounded)
+partial_z S1 along sigma(z), with t fixed = [179.851954254094048249, 196.127800058358238687] (display rounded)
+
+PASS: two one-dimensional IVTs prove an exact common zero E=K3=0.
+PASS: the common zero lies in the manuscript domain Omega_adm^J.
+PASS: I(p_*)=(0,tau(p_*)), with 0.0155<tau(p_*)<0.0157.
+PASS: every 0<t<=1/100 gives a strictly positive mass vector.
+PASS: the interval endpoints have m3=0 and m1=0; all other masses are positive.
+PASS: the nonzero Jacobian minor at the root gives the local analytic singular-compatible curve.
+PASS: 179<partial_z S1(z_*,1/100)<197, with m3=t.
+PASS: the (m1,m3) projection is locally invertible; the singular mass family is a local embedded real-analytic surface.
+NOTE: the strict bounds extend along the nearby curve by continuity after shrinking the analytic neighborhood.
+NOTE: no global uniqueness in the full rectangle is claimed.
+NOTE: the mass-surface conclusion is local; no global injectivity is claimed.

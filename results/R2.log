@@ -1,0 +1,40 @@
+PASS A: u=0.31, 0.4710 <= v <= 0.4711.
+  H(lower) in [0.0057737512, 0.0057737513]
+  H(upper) in [-0.0019643371, -0.0019643370]
+  H_v(segment) in [-77.6625486972, -77.0995099333]
+  m1(segment) in [0.1276425438, 0.1301732916]
+  m3(segment) in [1.0895648796, 1.1002334957]
+  m5(segment) in [0.1286823185, 0.1294434332]
+  Every consecutive distance gap exceeds 3/100.
+  Thus this positive-mass segment contains exactly one zero of H.
+PASS B: u=0.35, 0.5878 <= v <= 0.5879.
+  H(lower) in [0.0017135362, 0.0017135363]
+  H(upper) in [-0.0020360784, -0.0020360783]
+  H_v(segment) in [-37.6622253749, -37.3302922296]
+  m1(segment) in [0.2163809458, 0.2197097622]
+  m3(segment) in [1.4248220830, 1.4359047782]
+  m5(segment) in [0.2175674795, 0.2184798494]
+  Every consecutive distance gap exceeds 3/100.
+  Thus this positive-mass segment contains exactly one zero of H.
+PASS F: u=0.40, 0.7275 <= v <= 0.7276.
+  H(lower) in [0.0002828816, 0.0002828817]
+  H(upper) in [-0.0008865428, -0.0008865427]
+  H_v(segment) in [-11.7612136808, -11.6273162558]
+  m1(segment) in [0.3802921503, 0.3845515077]
+  m3(segment) in [1.9658993056, 1.9788223118]
+  m5(segment) in [0.3817268697, 0.3829327767]
+  Every consecutive distance gap exceeds 3/100.
+  Thus this positive-mass segment contains exactly one zero of H.
+PASS G: u=0.45, 0.7705 <= v <= 0.7706.
+  H(lower) in [0.0005401794, 0.0005401795]
+  H(upper) in [-0.0001304822, -0.0001304821]
+  H_v(segment) in [-6.7382077285, -6.6750305231]
+  m1(segment) in [0.7335530276, 0.7402203208]
+  m3(segment) in [4.7170287569, 4.7444141716]
+  m5(segment) in [0.7360411114, 0.7380778868]
+  Every consecutive distance gap exceeds 3/100.
+  Thus this positive-mass segment contains exactly one zero of H.
+VERIFIED: H=0 meets the OPEN regions A, B, F and G in positive masses.
+Each certified zero has H_v<-6 and hence lies on a local analytic arc.
+The independent closure exclusion is checked separately by certificate R3.
+No global component count or global graph property is asserted.

@@ -1,0 +1,21 @@
+PASS: the entire closed box B is strictly inside Omega_adm^J.
+det(P)(B) subset [-16.388657273362, -16.354743214644]
+m1(B) subset [0.451359639027, 0.455343124816]
+m3(B) subset [0.451954896426, 0.454762348189]
+m5(B) subset [0.452105878883, 0.454605808410]
+PASS: -17 < det(P) < -16 and 0.45 < m1,m3,m5 < 0.46 on B.
+det(DM)(B) subset [249.200815543773, 350.890762372551]
+det D_(x,y)(m1-m3,m3-m5)(B) subset [115.174204706527, 121.118226971135]
+PASS: 249 < det(DM) < 351 and 115 < xy minor < 122 on B.
+PASS: d_x(m1-m3)>11, d_y(m3-m5)>8, d_x(m1-m5)>17 on B.
+K_x subset [0.503163430524, 0.503167659916]
+K_y subset [0.389988240063, 0.389990521221]
+PASS: ||I-R D_(x,y)f||_infinity < 3/100 throughout B.
+PASS: K is strictly inside B_x x B_y, uniformly for all z in B_z.
+THEOREM: for every z in [0.199999,0.200001], exactly one (x,y)
+in B_x x B_y has m1=m3=m5; these points form an analytic arc.
+THEOREM: each equality surface is regular in int(B), and the
+three surfaces meet pairwise transversely along this arc.
+COROLLARY: every point of the arc in int(B) is approached by
+all six strict positive axial mass orders.
+SCOPE: this is a local kite result, not a global classification.

@@ -1,0 +1,13 @@
+PASS corner: H_v subset [-7.586179519236, -1.226308863610] and H_v<-1.
+PASS corner: Q_C subset [0.628489341642, 2.529913634086] and Q_C>3/5.
+PASS corner: E subset [-0.842898931037, -0.388686913458] and E<-3/8.
+PASS corner: both comparison paths remain in the corner rectangle.
+PASS: 4021 exact rational rectangles form a complete partition.
+Counts: {"H+": 237, "H-": 2976, "corner": 21, "outside_forbidden": 765, "outside_v_le_u": 22}
+H+: every signed endpoint exceeds 0.000367753326
+H-: every signed endpoint exceeds 0.000001467546
+THEOREM VERIFIED: H=0 misses all points of Omega satisfying
+  v*(1-u^2)-2*u >= 0, OR u^2+2*u*v-1 >= 0, OR
+  [u^2+2*u-1 >= 0 AND 1-2*u*v-v^2 >= 0].
+Therefore Z intersects none of the relative closures C,D,E,H,I.
+No mass-ordering or mass-positivity theorem was used in this certificate.

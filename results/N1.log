@@ -1,0 +1,20 @@
+PASS: symbolic distance and full Cartesian reduction identities.
+PASS box 1: a unique exact root with masses (1/50,1,1/100,1,3/10).
+det(P): [-108.813659175099820, -108.813603350647787]; det(Df): [30959.148169048915739, 30959.218869661892583]
+det(DM) at the root: [284.515275046769104, 284.516070751714397]
+Contraction factor <= 0.000001643956140 < 1e-5
+alpha: [1.306770949241335, 1.306770963435418]
+Root coordinate 1 in [0.424030037799390, 0.424030037799394]
+Root coordinate 2 in [0.293530589884625, 0.293530589884627]
+Root coordinate 3 in [0.141339619965127, 0.141339619965130]
+PASS box 2: a unique exact root with masses (1/50,1,1/100,1,3/10).
+det(P): [-0.000213875717376, -0.000213003009028]; det(Df): [-346.572044698497610, -346.571643379281317]
+det(DM) at the root: [-1627075.815875834805803, -1620434.744217120469868]
+Contraction factor <= 0.000000830047937 < 1e-5
+alpha: [2.068283026941640, 2.068283061715739]
+Root coordinate 1 in [0.978349754805407, 0.978349754805409]
+Root coordinate 2 in [0.295667726655115, 0.295667726655116]
+Root coordinate 3 in [0.556483870164586, 0.556483870164589]
+THEOREM: the normalized nonsingular mass map is not globally injective.
+The two mass-preserving similarity classes are distinct.
+COROLLARY: every mass vector in some open neighborhood of the target has at least two shapes.
