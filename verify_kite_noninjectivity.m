@@ -174,14 +174,38 @@ end
 end
 
 function verify_cartesian_identities()
-% Exact identities for all shapes, not tests at a finite list of points.
-syms x y z real
-[~,~,g]=kite_system(x,y,z);
-a=g.gamma/2;h=g.r24/2;
-equalZero([g.beta+g.gamma-2;g.alpha-1-g.r35; ...
-    g.r12^2-a^2-h^2;g.r23^2-(1-a)^2-h^2; ...
-    g.r25^2-(g.alpha-a)^2-h^2],'Cartesian distance identities');
-syms a alpha m1 m3 m5 s12 s23 s24 s25 s35 s15 real
+% Exact polynomial identities after clearing denominators. A and B are
+% certified strictly positive on each interval box in the main verifier.
+% Free symbols must not pass through the guarded interval division helpers.
+x=sym('x','real');
+y=sym('y','real');
+z=sym('z','real');
+A=(x+y)*(1-x*y);
+B=(x-z)*(1+x*z);
+R=y*z*(1+x*x)^2;
+C=A*B+R;
+aNumerator=x*(1-y*y);
+hNumerator=2*x*y;
+r12Numerator=x*(1+y*y);
+r23Numerator=y*(1+x*x);
+r25Numerator=x*y*(1+x*x)*(1+z*z);
+equalZero([2*y*(1-x*x)+2*aNumerator-2*A; ...
+    C-A*B-R; ...
+    r12Numerator^2-aNumerator^2-hNumerator^2; ...
+    r23Numerator^2-(A-aNumerator)^2-hNumerator^2; ...
+    r25Numerator^2-(C-aNumerator*B)^2-(hNumerator*B)^2], ...
+    'Denominator-cleared Cartesian distance identities');
+a=sym('a','real');
+alpha=sym('alpha','real');
+m1=sym('m1','real');
+m3=sym('m3','real');
+m5=sym('m5','real');
+s12=sym('s12','real');
+s23=sym('s23','real');
+s24=sym('s24','real');
+s25=sym('s25','real');
+s35=sym('s35','real');
+s15=sym('s15','real');
 lambda=m1*s12+m3*s23+m5*s25+2*s24;
 a2=-m1*a*s12+m3*(1-a)*s23+m5*(alpha-a)*s25;
 a1=2*a*s12+m3+m5*alpha*s15;

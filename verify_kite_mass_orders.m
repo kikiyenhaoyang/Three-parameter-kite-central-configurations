@@ -65,12 +65,14 @@ for k=1:6
         replaced=P0; replaced(:,j)=b0;
         cramer(j)=simplifyFraction(det(replaced)/detP);
     end
-    compact=[ ...
-        (1-g.alpha)*g.d1*g.d4*g.W-g.alpha*(1-g.alpha)*g.d2*g.d6*g.V ...
-            +(1-g.alpha)^2*g.d4*g.d6*g.U;
-        g.alpha*(1-g.alpha)*g.d4*g.d5*g.U+g.alpha*g.d2*g.d3*g.W ...
-            -g.alpha^2*g.d2*g.d5*g.V;
-        g.alpha*g.d1*g.d5*g.V+(g.alpha-1)*g.d3*g.d6*g.U-g.d1*g.d3*g.W];
+    % Assign scalar entries explicitly: whitespace before unary +/- inside
+    % a bracket literal can otherwise create extra columns in MATLAB.
+    compact=sym(zeros(3,1));
+    compact(1)=(1-g.alpha)*g.d1*g.d4*g.W-g.alpha*(1-g.alpha)*g.d2*g.d6*g.V + ...
+        (1-g.alpha)^2*g.d4*g.d6*g.U;
+    compact(2)=g.alpha*(1-g.alpha)*g.d4*g.d5*g.U+g.alpha*g.d2*g.d3*g.W - ...
+        g.alpha^2*g.d2*g.d5*g.V;
+    compact(3)=g.alpha*g.d1*g.d5*g.V+(g.alpha-1)*g.d3*g.d6*g.U-g.d1*g.d3*g.W;
     equalZero(m0-cramer,'Cramer solution');
     equalZero(m0-compact/detP,'Compact Cramer formulas');
     limits=bounds{k};
