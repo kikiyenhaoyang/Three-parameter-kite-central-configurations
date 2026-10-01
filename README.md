@@ -95,7 +95,7 @@ The package targets MATLAB R2020b or later with the Symbolic Math Toolbox instal
 
 This compatibility range has not yet been validated across actual MATLAB installations.
 
-All mathematical computations use symbolic (`sym`) arithmetic. `run_all` additionally uses the MATLAB JVM to compute SHA-256 hashes for package-integrity checks.
+All mathematical computations use symbolic (`sym`) arithmetic. 
 
 ## **Certificate Data**
 
@@ -107,38 +107,6 @@ exclusion_certificate.json
 ```
 
 Their byte contents are identical to those of the original attachments.
-
-The original attachments did not include the original manifest, `SHA256SUMS`, or external proof notes. The manifest, file hashes, and usage instructions provided with this package are MATLAB-specific replacements.
-
-## **File Integrity**
-
-`run_all` verifies the files included in the package against their recorded SHA-256 hashes.
-
-If you modify any source file, its original checksum will no longer match. This is expected for a modified working copy. To test modified code, run the corresponding verifier directly.
-
-The checksum mechanism is intended only to detect changes in file contents. It is **not** a digital-signature or authenticity mechanism.
-
-## Attachment packaging repair
-
-This copy was reconstructed from the 17 supplied attachments. See
-`REPAIR_NOTES.txt` and `repair_audit.json` for the exact packaging findings.
-All eight verifier files and both JSON certificates retain their uploaded
-byte contents. Only comments were corrected in `run_all.m` and `selftest.m`;
-their executable code is unchanged. The manifest version identifies this
-repackaged copy, and the supplied checksum inventory is preserved as
-`ORIGINAL_SHA256SUMS.txt`.
-
-The active `SHA256SUMS` covers this copy. It was regenerated from these
-attachments; it does not establish that the attachments match a complete
-original archive. The original inventory has 16 entries with no supplied
-file, including the B1 verifier. B1 is not included in this copy.
-
-Start with:
-
-```matlab
-run_all('CheckOnly', true)
-run_all('Only', {'K0'})
-```
 
 Then use `run_all` for all eight bundled checks, or `selftest('Full', true)`
 for the arithmetic self-tests, all eight checks, and the five available
